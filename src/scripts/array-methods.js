@@ -21,18 +21,18 @@ const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uran
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
 
-const planetEl = document.getElementById("planets");
+// const planetEl = document.getElementById("planets");
 
-const capPlanets = planets.map(planets => {
-    return planets.charAt(0).toUpperCase() + planets.slice(1);
+// const capPlanets = planets.map(planets => {
+//     return planets.charAt(0).toUpperCase() + planets.slice(1);
 
-})
-console.log(capPlanets)
-planets.innerHTML += "<h1> Planet Name: </h1>";
-planets.forEach(planets => {
-    planetEl.innerHTML += `<p>${planets.charAt(0).toUpperCase()}${planets.slice(1)}</p>`
-planetEl.innerHTML += "<hr/>"
-})
+// })
+// console.log(capPlanets)
+// planets.innerHTML += "<h1> Planet Name: </h1>";
+// planets.forEach(planets => {
+//     planetEl.innerHTML += `<p>${planets.charAt(0).toUpperCase()}${planets.slice(1)}</p>`
+// planetEl.innerHTML += "<hr/>"
+// })
 
 /*
     Use the filter method to create a new array that
@@ -41,3 +41,15 @@ planetEl.innerHTML += "<hr/>"
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 */
+
+const planetEl = document.getElementById("planets");
+
+const ePlanets = planets.filter(planets => {
+    return planets.includes("e")
+})
+console.log(ePlanets)
+planets.innerHTML += "<h1> Planet Name: </h1>";
+ePlanets.forEach(planets => {
+    planetEl.innerHTML += `<p>${planets}</p>`
+planetEl.innerHTML += "<hr/>"
+})
